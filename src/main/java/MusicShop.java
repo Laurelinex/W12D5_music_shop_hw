@@ -28,4 +28,12 @@ public class MusicShop {
         stock.remove(item);
     }
 
+    public double calculateTotalPotentialProfit() {
+        int total = 0;
+        for(ISell item : stock) {
+            total += item.calculateMarkup();
+        }
+        return total;
+    }
+
 }
